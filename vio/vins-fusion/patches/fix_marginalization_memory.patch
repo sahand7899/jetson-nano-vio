@@ -1,0 +1,13 @@
+diff --git a/vins/src/factor/marginalization_factor.cpp b/vins/src/factor/marginalization_factor.cpp
+index 1c90f40..1d49d28 100755
+--- a/vins/src/factor/marginalization_factor.cpp
++++ b/vins/src/factor/marginalization_factor.cpp
+@@ -96,7 +96,7 @@ MarginalizationInfo::~MarginalizationInfo()
+         delete factors[i]->cost_function;
+         factors[i]->cost_function = nullptr;
+ 
+-        factors[i] = nullptr;
++        delete factors[i];
+     }
+ }
+ 

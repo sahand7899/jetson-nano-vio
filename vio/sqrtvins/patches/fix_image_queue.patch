@@ -1,0 +1,11 @@
+--- a/ov_srvins/src/ros/ROS2Visualizer.cpp
++++ b/ov_srvins/src/ros/ROS2Visualizer.cpp
+@@ -250,7 +250,7 @@
+       //    std::bind(&ROS2Visualizer::callback_monocular, this,
+       //    std::placeholders::_1, i));
+       auto sub = _node->create_subscription<sensor_msgs::msg::Image>(
+-          cam_topic, 10,
++          cam_topic, 100,
+           [this, i](const sensor_msgs::msg::Image::SharedPtr msg0) {
+             callback_monocular(msg0, i);
+           });

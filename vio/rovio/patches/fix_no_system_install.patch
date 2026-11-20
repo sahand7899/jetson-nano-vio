@@ -1,0 +1,15 @@
+diff --git a/rovio/CMakeLists.txt b/rovio/CMakeLists.txt
+index 46abea3..90f42ae 100644
+--- a/rovio/CMakeLists.txt
++++ b/rovio/CMakeLists.txt
+@@ -35,7 +35,9 @@ add_definitions(
+ )
+ 
+ # Build the math submodule inline
+-add_subdirectory(lightweight_filtering)
++# lightweight_filtering is header-only and is used from its source folder (next line); its own
++# CMake file would only install a file into the system folder /usr/share/cmake (not allowed here)
++# add_subdirectory(lightweight_filtering)
+ include_directories(${PROJECT_SOURCE_DIR}/lightweight_filtering/include)
+ 
+ # ROS2 dependencies

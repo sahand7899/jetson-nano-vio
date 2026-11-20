@@ -1,0 +1,9 @@
+datasets/
+results/
+recordings/
+__pycache__/
+*.pyc
+# colcon output when built in place
+build/
+install/
+log/

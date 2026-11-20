@@ -1,0 +1,13 @@
+diff --git a/vins/src/utility/visualization.cpp b/vins/src/utility/visualization.cpp
+index 8efb3fd..d64e01c 100755
+--- a/vins/src/utility/visualization.cpp
++++ b/vins/src/utility/visualization.cpp
+@@ -167,7 +167,7 @@ void pubOdometry(const Estimator &estimator, const std_msgs::msg::Header &header
+         ofstream foutC(VINS_RESULT_PATH, ios::app);
+         foutC.setf(ios::fixed, ios::floatfield);
+         foutC.precision(0);
+-        foutC << header.stamp.sec + header.stamp.nanosec * (1e-9) << ",";
++        foutC << (header.stamp.sec + header.stamp.nanosec * (1e-9)) * 1e9 << ",";
+         foutC.precision(5);
+         foutC << estimator.Ps[WINDOW_SIZE].x() << ","
+               << estimator.Ps[WINDOW_SIZE].y() << ","

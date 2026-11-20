@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>icm20948_imu</name>
+  <version>0.1.0</version>
+  <description>Minimal ROS 2 driver for the ICM-20948 IMU on the Waveshare IMX219-83 camera board (Jetson I2C, FIFO read, chip-clock time stamps). Written for the thesis project.</description>
+  <maintainer email="none@example.com">Sahand Shahbazi</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

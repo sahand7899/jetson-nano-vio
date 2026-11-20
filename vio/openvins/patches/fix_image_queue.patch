@@ -1,0 +1,11 @@
+--- a/ov_msckf/src/ros/ROS2Visualizer.cpp
++++ b/ov_msckf/src/ros/ROS2Visualizer.cpp
+@@ -211,7 +211,7 @@
+       // auto sub = _node->create_subscription<sensor_msgs::msg::Image>(
+       //    cam_topic, rclcpp::SensorDataQoS(), std::bind(&ROS2Visualizer::callback_monocular, this, std::placeholders::_1, i));
+       auto sub = _node->create_subscription<sensor_msgs::msg::Image>(
+-          cam_topic, 10, [this, i](const sensor_msgs::msg::Image::SharedPtr msg0) { callback_monocular(msg0, i); });
++          cam_topic, 100, [this, i](const sensor_msgs::msg::Image::SharedPtr msg0) { callback_monocular(msg0, i); });
+       subs_cam.push_back(sub);
+       PRINT_INFO("subscribing to cam (mono): %s\n", cam_topic.c_str());
+     }
