@@ -12,7 +12,7 @@ scp -r sensors jetson:~/sensors_ws
 ssh jetson ~/sensors_ws/build.sh        # about 45 s
 ```
 
-## IMU driver (`icm20948_imu/`)
+## IMU driver (`src/icm20948_imu/`)
 
 The ICM-20948 on the camera board is not connected through the camera cable for data. It needs
 two wires to the Jetson's 40-pin header:
